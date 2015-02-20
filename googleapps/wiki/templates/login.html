@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/signup.css">
+  </head>
+  <div class="login-area">
+      {% if username %}
+        {{username}} (
+        <a class="login-link" href="/logout">logout</a>
+        )
+      {% else %}
+        <a class="login-link" href="/login">login</a>|
+        <a class="login-link" href="/signup">signup</a>
+      {% endif %}
+  </div>
+  <body>
+    <div class="login-label">Login</div>
+    <div class="login-form">
+    <form method="post">
+      <table>
+        <tr>
+          <td class="label">Username</td>
+          <td><input type="text" name="username" value=""></td>
+        </tr>
+
+        <tr>
+          <td class="label">Password</td>
+          <td><input type="password" name="password" value=""></td>
+        </tr>
+      </table>
+      <div class=error>{{error}}</div>
+      <input type="submit">
+    </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Resistors</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style1.css">
+  </head>
+  <body>
+    <img src="/images/resistor-color-chart.jpg" height="450" width="600"></br>
+    <form class = "bung" method="post">
+    	<select class = "d" name="co1">
+    		{%for x in C1%}
+  			<option>{{x}}</option>
+  			{% endfor %}
+		  </select>
+		  <select class = "j" name="co2">
+    		{%for y in C2%}
+  			<option>{{y}}</option>
+  			{% endfor %}
+		  </select>
+		  <select class = "k" name="co3">
+    		{%for z in C3%}
+  			<option>{{z}}</option>
+  			{% endfor %}
+		  </select>
+		  <select name="co4">
+    		{%for q in MULTI%}
+  			<option>{{q}}</option>
+  			{% endfor %}
+		  </select>
+		<input type= "submit" >
+	
+	{%if resis %}
+	<div class = "bung1">
+		{{resis}} <img src="/images/ohm.png" height="60" width"70">
+	</div>
+  Quantity
+  <input type = "text" name= "k" >
+  <input type= "submit" >
+  <a href = "/database"> Click here to see the Databade </a>
+	{%endif %}
+
+</form>
+  </body>
+</html>

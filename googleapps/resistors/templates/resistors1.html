@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Resistors</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style1.css">
+  </head>
+  <body>
+    <img src="/images/resistor-color-chart.jpg" height="450" width="600"></br>
+    <form class = "bung" method="post">
+    	<select name="color1">
+    		{%for x in COLORS%}
+  			<option value = "blue">{{x}}</option>
+  			{% endfor %}
+		</select>
+		<select name="color2">
+    		{%for x in COLORS%}
+  			<option value = {{c2}}>{{x}}</option>
+  			{% endfor %}
+		</select>
+		<select name="color3">
+    		{%for x in COLORS%}
+  			<option value = {{c3}}>{{x}}</option>
+  			{% endfor %}
+		</select>
+		<select name="color4">
+    		{%for x in MULTI%}
+  			<option value = {{c4}}>{{x}}</option>
+  			{% endfor %}
+		</select>
+		<input type= "submit" >
+	</form>
+	{%if resis %}
+	<div class = "bung1">
+		{{resis}} <img src="/images/ohm.png" height="60" width"70">
+	</div>
+	{%endif %}
+  </body>
+</html>

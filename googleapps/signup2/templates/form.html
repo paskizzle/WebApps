@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Signup Page</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/signup.css">
+  </head>
+  <body>
+    <h1>Signup</h1>
+    <form method="post">
+      <table>
+        <tr>
+          <td class="label">Username</td>
+          <td><input type="text" name="username" value={{username}}></td>
+          <td class="error">{{erroruser}}</td>
+        </tr>
+        <tr>
+          <td class="label">Password</td>
+          <td><input type="password" name="password" value=""></td>
+          <td class="error">{{errorpassword}}</td>
+        </tr>
+
+        <tr>
+          <td class="label">Verify Password</td>
+          <td><input type="password" name="verify" value=""></td>
+          <td class="error">{{errorverify}}</td>
+        </tr>
+
+        <tr>
+          <td class="label">Email (optional)</td>
+          <td><input type="text" name="email" value={{email}}></td>
+          <td class="error">{{erroremail}}</td>
+        </tr>
+      </table>
+
+      <input type="submit">
+
+    </form>
+  </body>
+</html>

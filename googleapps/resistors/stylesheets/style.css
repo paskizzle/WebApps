@@ -1,0 +1,19 @@
+.firstline {
+   font-size: 48px;
+   color:#99FF66;
+}
+html {
+	text-align: center;
+}
+.gl{
+	font-size: 36px;
+	color: Blue;
+}
+.name{
+	font-size: 24px;
+	color: #808080
+}
+.poop{
+	font-size: 18px;
+	color: Red;
+}

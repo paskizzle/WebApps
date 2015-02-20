@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>page</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/wiki.css">
+  </head>
+  <div class="login-area">
+      {% if username %}
+        {{username}} (
+        <a class="login-link" href="/logout">logout</a>
+        )
+      {% else %}
+        <a class="login-link" href="/login">login</a>|
+        <a class="login-link" href="/signup">signup</a>
+      {% endif %}
+  </div>
+  <body>
+    <a href="javascript:history.back()"> Cancel </a>
+    <h1>This is a sample {{name}} EDIT page.</h1>
+  </body>
+  <form method="post">
+    <label>
+      <textarea name="post">{{postin}}</textarea>
+    </label>
+    <br>
+    <div class = "error">{{error}}</div>
+    <input type="submit">
+  </form>
+</html>

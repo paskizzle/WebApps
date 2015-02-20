@@ -1,0 +1,39 @@
+.login-form {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+}
+.login-label {
+    font-size: 32px;
+    color: red;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.label {
+  color: blue;
+}
+.error {
+  color: red;
+}
+
+.login-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.login-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.login-link:visited {
+    color: gray;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}

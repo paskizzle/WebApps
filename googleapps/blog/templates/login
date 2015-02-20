@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/signup.css">
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form method="post">
+      <table>
+        <tr>
+          <td class="label">Username</td>
+          <td><input type="text" name="username" value={{username}}></td>
+          <td class="error">{{erroruser}}</td>
+        </tr>
+        <tr>
+          <td class="label">Password</td>
+          <td><input type="password" name="password" value=""></td>
+          <td class="error">{{errorpassword}}</td>
+        </tr>
+
+      </table>
+
+      <input type="submit">
+
+    </form>
+  </body>
+</html>

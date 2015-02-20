@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>history</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/wiki.css">
+  </head>
+  <div class="login-area">
+      {% if edit and username %}
+        <a class="login-link" href="/_edit{{name1}}" >edit</a> |
+        <a class="login-link" href="{{name1}}">view</a><br>
+      {% endif %}
+      {% if username %}
+        {{username}} (
+        <a class="login-link" href="/logout">logout</a>
+        ){{caches}}
+      {% else %}
+        <a class="login-link" href="/login">login</a>|
+        <a class="login-link" href="/signup">signup</a>
+      {% endif %}
+  </div>
+  <body>
+    <h1>{{name1}} Page History</h1></br>
+    {% for x in history%}
+      <a href="{{name1}}?version={{x.key().id()}}"> view </a> | <a href = "/_edit{{name1}}?version={{x.key().id()}}"> edit </a>
+      <b>user:</b> {{x.username}}
+      <b>date:</b>{{x.created.date().strftime("%A %B %d %Y")}} {{x.created.time().strftime("%X %Z")}}
+      {% autoescape true %}
+      <b>preview:</b>{{x.pageinfo}}<br><br>
+      {% endautoescape %}
+    {% endfor %}
+  </body>
+</html>
